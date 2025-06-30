@@ -1,0 +1,519 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  header {
+    background: #2196F3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .main-logo {
+    width: auto;              /* Let width adjust naturally */
+    height: 120px;            /* Adjust this as needed: 120px, 150px, etc. */
+    display: block;
+    margin: 0 auto 20px auto; /* Center it and space below */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  nav a i {
+    margin-right: 5px;
+  }
+  
+  .welcome {
+    padding: 40px 20px;
+  }
+  
+  .search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search-box input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-box a {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    text-decoration: none;
+  }
+  
+  .discount {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+
+  @media (min-width: 768px) {
+    body {
+      padding: 30px;
+      font-size: 18px;
+    }
+  
+    main .welcome {
+      max-width: 700px;
+      margin: auto;
+    }
+  
+    nav a {
+      font-size: 18px;
+      margin: 0 20px;
+    }
+  
+    .browse-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  
+    footer {
+      font-size: 16px;
+      padding: 20px;
+    }
+  }
+  /* Import Berkshire font */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+/* Header brand name */
+.brand-name {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 32px;
+  color: white;
+  margin: 0;
+}
+
+/* Optional: adjust header layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #3498db; /* example */
+}
+
+/* Main logo (inside content) */
+.main-logo {
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+/* Make body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make the body a flex column container */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main content area should grow to fill available space */
+  main {
+    flex: 1;
+  }
+
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers horizontally */
+    justify-content: center; /* centers vertically */
+    padding: 40px 30px;
+  }
+
+  main {
+    max-width: 1200px;        /* Increase width of the content area */
+    margin: 0 auto;
+    padding: 30px;           /* Adds space inside main */
+    font-size: 1.2rem;       /* Slightly bigger text */
+    line-height: 1.8;     
+    min-height: 80vh;   /* Improve readability */
+  }
+
+
+  
+
+
+/* Shared Styles for About Us and FAQ Pages */
+
+html, body { height: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; }
+
+main { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #fdfdfd; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; font-family: 'Segoe UI', sans-serif; flex: 1; margin-top: 100px; /* To avoid overlap with fixed header */ }
+
+main h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #333; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; }
+
+/* About Us Page */ .about-content { font-size: 1.1rem; line-height: 1.6; color: #444; text-align: justify; }
+
+/* FAQ Page */ .faq h3 { font-size: 1.2rem; margin-top: 1.5rem; color: #1a1a1a; }
+
+.faq p { font-size: 1.05rem; margin-top: 0.3rem; color: #555; line-height: 1.5; }
+
+.faq { padding: 0 1rem; }
+
+footer { background-color: #222; color: #fff; text-align: center; padding: 1rem 0; position: relative; bottom: 0; width: 100%; margin-top: auto; }
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 100px auto 2rem;
+    padding: 1.5rem;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+
+
+  /* Ensure the layout uses full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Create a wrapper that fills the screen vertically */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Fixed header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: ;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  nav {
+    margin-top: 0.5rem;
+  }
+  
+  nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  /* Main padding to avoid overlapping with header */
+  main {
+    flex: 1;
+    padding: 120px 20px 20px; /* Push content below header */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Footer sticks at bottom */
+  footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+  /* Prevent header overlap */
+main {
+    padding-top: 100px; /* Adjust based on your header height */
+  }
+  
+  /* Footer at bottom */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Keep existing footer design, just make sure it stays at bottom */
+  footer {
+    background-color: #222; /* Or your original color */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+
+
+
+  /* Make the full page height-flex to push footer to bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header should not overlap content */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Main pushes footer down and avoids header overlap */
+  .faq-content {
+    flex: 1;
+    padding: 120px 20px 40px; /* Top padding pushes content below fixed header */
+  }
+  
+  /* Sticky Footer stays at the bottom */
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+
+
+  /* Basic full-page setup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header fixed at top */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Main content starts below fixed header */
+  main.faq-content {
+    flex: 1;
+    padding: 100px 20px 40px; /* enough top padding to avoid header overlap */
+  }
+  
+  /* Sticky footer at bottom */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+
+
+  header {
+    background-color: #2b78e4; /* Original blue shade */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  body.faq{
+    background-color: #f4f4f4;
+    padding-top: 100px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  body.faq {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* or any soft color you want */
+    padding-top: 100px; /* pushes FAQ content below header */
+  }
+  
+  .main-faq.content {
+    background: none; /* removes unwanted white background */
+    padding: 20px;
+    box-shadow: none;
+  }
+  
+  .main-faq.content h2 {
+    margin-top: 0;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* or your chosen gray-black */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+  .book-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.book-info {
+  flex: 1 1 300px;
+  padding-right: 20px;
+}
+
+.book-row img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.book-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 90%;
+  width: 400px;
+  text-align: center;
+}
+
+.book-container img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.book-container button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.book-item {
+  background: #fff;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-item img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.book-item button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

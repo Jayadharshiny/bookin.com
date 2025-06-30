@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Books | Bookin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1976d2;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .filter {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .book-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .book-item {
+      background-color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .book-item img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+
+    .book-item button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 4rem;
+      background-color: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Bookin</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="browse.html"><i class="fas fa-search"></i> Browse</a>
+      <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="filter">
+      <label for="category"><b>SELECT CATEGORY:</b></label>
+      <select id="category" onchange="filterBooks()">
+        <option value="all">All</option>
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="biology">Biology</option>
+        <option value="mathematics">Mathematics</option>
+        <option value="science">Science</option>
+        <option value="jeecombo">JEE Combo Packs</option>
+        <option value="dictionary">Science Dictionaries</option>
+      </select>
+    </div>
+
+    <div class="book-list" id="bookGrid">
+      
+      <div class="book-item" data-category="physics">
+        <h3>HC Verma Vol 1</h3>
+        <p>Condition: Good, Name written</p>
+        <p>Original Price: ₹495</p>
+        <p><strong>Now: ₹240</strong></p>
+        <a href="book_hcverma_part1.html"><button>Order Now</button></a>
+        <img src="phy_hcverma_part1_front.jpg" alt="HC Verma Vol 1">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>HC Verma Vol 2</h3>
+        <p>Condition: Good and perfect</p>
+        <p>Original Price: ₹495</p>
+        <p><strong>Now: ₹240</strong></p>
+        <a href="book_hcverma_part2.html"><button>Order Now</button></a>
+        <img src="phy_hcverma_part2_front.jpg" alt="HC Verma Vol 2">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>Pradeep Physics Class 11 Vol 1</h3>
+        <p>Condition: Excellent</p>
+        <p>Original Price: ₹780</p>
+        <p><strong>Now: ₹390</strong></p>
+        <a href="book_pradeep_phy11_vol1.html"><button>Order Now</button></a>
+        <img src="phy_pradeep_class11_vol1_front.jpg" alt="Pradeep Vol 1">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>Pradeep Physics Class 11 Vol 2</h3>
+        <p>Condition: Excellent</p>
+        <p>Original Price: ₹780</p>
+        <p><strong>Now: ₹390</strong></p>
+        <a href="book_pradeep_phy11_vol2.html"><button>Order Now</button></a>
+        <img src="phy_pradeep_class11_vol2_front.jpg" alt="Pradeep Vol 2">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>Pradeep Physics Class 12 Vol 1</h3>
+        <p>Condition: Few pages are off, rest are good.</p>
+        <p>Original Price: ₹470</p>
+        <p><strong>Now: ₹235</strong></p>
+        <a href="book_pradeep_phy12_vol1.html"><button>Order Now</button></a>
+        <img src="phy_pradeep_class12_vol1_front.jpg" alt="Pradeep Vol 1">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>Pradeep Physics Class 12 Vol 2</h3>
+        <p>Condition: Good and perfect. Name written.</p>
+        <p>Original Price: ₹470</p>
+        <p><strong>Now: ₹235</strong></p>
+        <a href="book_pradeep_phy12_vol2.html"><button>Order Now</button></a>
+        <img src="phy_pradeep_class12_vol2_front.jpg" alt="Pradeep Vol 2">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>S.Chand Science-Physics for ninth class Part I</h3>
+        <p>Condition: Usable. Markings are done. Name written</p>
+        <p>Original Price: ₹290</p>
+        <p><strong>Now: ₹145</strong></p>
+        <a href="book_schand_phy9_part3.html"><button>Order Now</button></a>
+        <img src="phy_schand_class9_front.jpg" alt="schand phy part 3">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>NCERT- Physics textbook class 12- part I and Part II</h3>
+        <p>Condition: Excellent</p>
+        <p>Original Price: ₹335</p>
+        <p><strong>Now: ₹168</strong></p>
+        <a href="book_ncert_phy12.html"><button>Order Now</button></a>
+        <img src="phy_ncert_class12_front.jpg" alt="ncert phy class 12">
+      </div>
+
+      <div class="book-item" data-category="physics">
+        <h3>Arihant-CBSE Chapterwise solved Physics class XII papers(2017-2009)</h3>
+        <p>Condition: Excellent</p>
+        <p>Original Price: ₹310</p>
+        <p><strong>Now: ₹155</strong></p>
+        <a href="book_arihant_phy12.html"><button>Order Now</button></a>
+        <img src="phy_arihant_front.jpg" alt="Arihant phy">
+      </div>
+
+
+      <div class="book-item" data-category="chemistry">
+        <h3>Pradeeps Chemistry Class 11 Vol 1</h3>
+        <p>Condition: Usable and readable. Pages are not very intact. Content is unharmed.</p>
+        <p>Original Price: ₹780</p>
+        <p><strong>Now: ₹390</strong></p>
+        <a href="book_pradeep_che11_vol1.html"><button>Order Now</button></a>
+        <img src="che_pradeep_class11_vol1_front.jpg" alt="Pradeep Vol 1">
+      </div>
+
+      <div class="book-item" data-category="chemistry">
+        <h3>Pradeeps Chemistry Class 11 Vol 2</h3>
+        <p>Condition: Usable and readable. Split into 2 parts.Binding is done. Content is unharmed.</p>
+        <p>Original Price: ₹780</p>
+        <p><strong>Now: ₹390</strong></p>
+        <a href="book_pradeep_che11_vol2.html"><button>Order Now</button></a>
+        <img src="che_pradeep_class11_vol2_front.jpg" alt="Pradeep Vol 2">
+      </div>
+
+      <div class="book-item" data-category="chemistry">
+        <h3>Pradeeps Chemistry Class 12 Vol 1</h3>
+        <p>Condition: Usable and readable.</p>
+        <p>Original Price: ₹528</p>
+        <p><strong>Now: ₹264</strong></p>
+        <a href="book_pradeep_che12_vol1.html"><button>Order Now</button></a>
+        <img src="che_pradeep_class12_vol1_front.jpg" alt="Pradeep Vol 1">
+      </div>
+
+      <div class="book-item" data-category="chemistry">
+        <h3>Pradeeps Chemistry Class 12 Vol 2</h3>
+        <p>Condition: Usable and good. Name written.</p>
+        <p>Original Price: ₹528</p>
+        <p><strong>Now: ₹264</strong></p>
+        <a href="book_pradeep_che12_vol2.html"><button>Order Now</button></a>
+        <img src="che_pradeep_class12_vol2_front.jpg" alt="Pradeep Vol 2">
+      </div>
+
+     <div class="book-item" data-category="chemistry">
+        <h3>NCERT - Chemistry class 12 Part I and Part II</h3>
+        <p>Condition: Good.Usable and readable. </p>
+        <p>Original Price: ₹310</p>
+        <p><strong>Now: ₹155</strong></p>
+        <a href="book_ncert_che12.html"><button>Order Now</button></a>
+        <img src="che_ncert_class12_front.jpg" alt="ncert che">
+      </div>
+
+      <div class="book-item" data-category="chemistry">
+        <h3>S.Chand Science- Chemistry for tenth class</h3>
+        <p>Condition: Good.Usable and readable.Name written. </p>
+        <p>Original Price: ₹450</p>
+        <p><strong>Now: ₹225</strong></p>
+        <a href="book_schand_che10.html"><button>Order Now</button></a>
+        <img src="che_schand_front.jpg" alt="schand che">
+      </div>
+
+      <div class="book-item" data-category="chemistry">
+        <h3>GRB NCERT solutions for Chemistry chapterwise class 11</h3>
+        <p>Condition: Good. Usable and readable. </p>
+        <p>Original Price: ₹286</p>
+        <p><strong>Now: ₹143</strong></p>
+        <a href="book_grb_che11.html"><button>Order Now</button></a>
+        <img src="che_grb_front.jpg" alt="grb che">
+      </div>
+
+      <div class="book-item" data-category="biology">
+        <h3>Pradeeps Biology Class 11 Vol 2</h3>
+        <p>Condition: Good. Usable and readable. </p>
+        <p>Original Price: ₹500</p>
+        <p><strong>Now: ₹250</strong></p>
+        <a href="book_pradeep_bio.html"><button>Order Now</button></a>
+        <img src="bio_pradeep_vol2_front.jpg" alt="pradeep bio">
+      </div>
+
+      <div class="book-item" data-category="biology">
+        <h3>S.Chand Science-Biology for ninth Part 3 </h3>
+        <p>Condition: Good. Usable and readable.Few markings are done. Name written. </p>
+        <p>Original Price: ₹315</p>
+        <p><strong>Now: ₹158</strong></p>
+        <a href="book_schand_bio.html"><button>Order Now</button></a>
+        <img src="bio_schand_part3_front.jpg" alt="schand bio">
+      </div>
+
+      <div class="book-item" data-category="mathematics">
+        <h3>NCERT- Mathematics Textbook for Class XII Part I and II</h3>
+        <p>Condition: Good. Usable and readable. </p>
+        <p>Original Price: ₹280</p>
+        <p><strong>Now: ₹140</strong></p>
+        <a href="book_ncert_math.html"><button>Order Now</button></a>
+        <img src="math_ncert_front.jpg" alt="ncert math">
+      </div>
+
+      <div class="book-item" data-category="mathematics">
+        <h3>R S Aggarwal Mathematics Class XII</h3>
+        <p>Condition: Good. Usable and readable. Name written</p>
+        <p>Original Price: ₹825</p>
+        <p><strong>Now: ₹412</strong></p>
+        <a href="book_rs_math.html"><button>Order Now</button></a>
+        <img src="math_rs_front.jpg" alt="rs math">
+      </div>
+
+      <div class="book-item" data-category="mathematics">
+        <h3>R D Sharma Mathematics Class XI</h3>
+        <p>Condition: Good. Usable and readable.Name written. </p>
+        <p>Original Price: ₹545</p>
+        <p><strong>Now: ₹273</strong></p>
+        <a href="book_rd_math.html"><button>Order Now</button></a>
+        <img src="math_rd_front.jpg" alt="rd math">
+      </div>
+
+      <div class="book-item" data-category="science">
+        <h3>Xam Idea Science Class IX term II</h3>
+        <p>Condition: Good and perfect. Usable and readable. </p>
+        <p>Original Price: ₹150</p>
+        <p><strong>Now: ₹75</strong></p>
+        <a href="book_xamidea_sci.html"><button>Order Now</button></a>
+        <img src="sci_xamidea_front.jpg" alt="sci xamidea">
+      </div>
+
+      <div class="book-item" data-category="science">
+        <h3>NCERT Exemplar Science class 9</h3>
+        <p>Condition: Good and perfect. Usable and readable. Name written. </p>
+        <p>Original Price: ₹125</p>
+        <p><strong>Now: ₹63</strong></p>
+        <a href="book_exemplar_sci.html"><button>Order Now</button></a>
+        <img src="sci_exemplar_front.jpg" alt="sci exemplar">
+      </div>
+
+      <div class="book-item" data-category="jeecombo">
+        <h3>Arihant Handbooks- Mathematics, Chemistry and Physics</h3>
+        <p>Condition: Good and perfect. Usable and readable. </p>
+        <p>Original Price: ₹750</p>
+        <p><strong>Now: ₹375</strong></p>
+        <a href="book_arihant_jeecombo.html"><button>Order Now</button></a>
+        <img src="jeecombo_handbooks_front.jpg" alt="jeecombo handbooks">
+      </div>
+
+      <div class="book-item" data-category="jeecombo">
+        <h3>JEE- MAINS Chemistry + Physics + Mathematics -Online and Offline solved papers(2018-2002)</h3>
+        <p>Condition: Good and perfect. Usable and readable.Markings are done. </p>
+        <p>Original Price: ₹1765</p>
+        <p><strong>Now: ₹882</strong></p>
+        <a href="book_qp_jeecombo.html"><button>Order Now</button></a>
+        <img src="jeecombo_qp_front.jpg" alt="jeecombo qp">
+      </div>
+
+      <div class="book-item" data-category="jeecombo">
+        <h3>Sutra Foundation Series IIT-JEE Series (Physics + Chemistry+ Mathematics)</h3>
+        <p>Condition: Good and perfect. Usable and readable. </p>
+        <p>Original Price: ₹600</p>
+        <p><strong>Now: ₹300</strong></p>
+        <a href="book_sutra_jeecombo.html"><button>Order Now</button></a>
+        <img src="jeecombo_sutra_front.jpg" alt="jeecombo sutra">
+      </div>
+
+
+      <div class="book-item" data-category="dictionary">
+        <h3>Knowledge in Nutshell- Chemistry</h3>
+        <p>Condition: Good and perfect. Usable and readable. </p>
+        <p>Original Price: ₹70</p>
+        <p><strong>Now: ₹35</strong></p>
+        <a href="book_dict_che.html"><button>Order Now</button></a>
+        <img src="dictionary_chemistry_front.jpg" alt="dictionary che">
+      </div>
+
+      <div class="book-item" data-category="dictionary">
+        <h3>Knowledge in Nutshell- Biology</h3>
+        <p>Condition: Good and perfect. Usable and readable. </p>
+        <p>Original Price: ₹70</p>
+        <p><strong>Now: ₹35</strong></p>
+        <a href="book_dict_bio.html"><button>Order Now</button></a>
+        <img src="dictionary_biology_front.jpg" alt="dictionary che">
+      </div>
+
+
+
+
+
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bookin. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterBooks() {
+      const category = document.getElementById("category").value;
+      const books = document.querySelectorAll(".book-item");
+      books.forEach(book => {
+        if (category === "all" || book.dataset.category === category) {
+          book.style.display = "block";
+        } else {
+          book.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
